@@ -1,12 +1,12 @@
 {
   "name": "html-to-vdom",
-  "version": "0.7.0",
+  "version": "0.7.2",
   "description": "Converts html into a vtree",
   "main": "index.js",
   "scripts": {
     "test": "mocha test",
     "test-coverage": "NODE_ENV=test ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && rm -rf ./coverage",
-    "build": "browserify index.js -o dist/index.js && browserify index.js | terser --compress --mangle > dist/index.min.js"
+    "build": "browserify index.js --standalone html-to-vdom -o dist/index.js && browserify index.js --standalone html-to-vdom | terser --compress --mangle > dist/index.min.js"
   },
   "repository": {
     "type": "git",
