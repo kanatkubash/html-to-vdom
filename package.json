@@ -1,6 +1,6 @@
 {
   "name": "html-to-vdom",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "Converts html into a vtree",
   "main": "index.js",
   "scripts": {
@@ -8,16 +8,8 @@
     "test-coverage": "NODE_ENV=test ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && rm -rf ./coverage",
     "build": "browserify index.js --standalone html-to-vdom -o dist/index.js && browserify index.js --standalone html-to-vdom | terser --compress --mangle > dist/index.min.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/TimBeyer/html-to-vdom.git"
-  },
   "author": "Tim Beyer",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TimBeyer/html-to-vdom/issues"
-  },
-  "homepage": "https://github.com/TimBeyer/html-to-vdom",
   "dependencies": {
     "browserify": "^17.0.0",
     "ent": "2.2.0",
